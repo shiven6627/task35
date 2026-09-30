@@ -7,9 +7,11 @@ const cors = require('cors')
 dotenv.config()
 
 const app = express()
+const PORT = process.env.PORT;
 
 app.use(cors())
 app.use(express.json())
+
 
 app.use((req,res,next)=>{
      console.log(req.path,req.method);
@@ -34,7 +36,7 @@ mongoose.connect(process.env.MONGODB_URI)
 .catch((error)=>{ console.log('❌ MongoDB connection failed:', error.message);
 })
 
-const PORT = process.env.PORT;
+
 
 
 
