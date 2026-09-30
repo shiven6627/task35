@@ -1,4 +1,4 @@
-const Workout = require('../Models/workoutmodel')
+const Workout = require('../models/workoutmodel')
 const mongoose = require('mongoose')
 
 exports.getWorkouts = async (req, res) => {
