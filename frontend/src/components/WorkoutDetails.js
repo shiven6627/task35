@@ -6,7 +6,7 @@ const WorkoutDetails = ({ workout }) => {
   const { dispatch } = useWorkoutsContext()
 
   const handleClick = async () => {
-    const response = await fetch('/api/workouts/' + workout._id, {
+    const response = await fetch('https://task35-7vou.onrender.com/api/workouts/' + workout._id, {
       method: 'DELETE'
     })
 
