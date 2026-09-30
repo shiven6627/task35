@@ -26,11 +26,12 @@ app.use('/api/workouts/', workoutRoutes)
 
 mongoose.connect(process.env.MONGODB_URI)
 .then(()=>{
+      console.log('✅ MongoDB connected successfully')
     app.listen(PORT,()=>{
     console.log(`server is running on http://localhost:${PORT}`);
 })
 })
-.catch((error)=>{ console.log(error);
+.catch((error)=>{ console.log('❌ MongoDB connection failed:', error.message);
 })
 
 const PORT = process.env.PORT;
